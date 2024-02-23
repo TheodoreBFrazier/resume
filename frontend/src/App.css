@@ -1,74 +1,21 @@
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(90deg, hsla(68, 17%, 27%, 1) 0%, hsla(45, 22%, 96%, 1) 100%);
+.libre-baskerville-regular {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-
-.container {
-  display: flex;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+.libre-baskerville-bold {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
-.contact-info {
-  flex: 1;
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
+.libre-baskerville-regular-italic {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: italic;
 }
 
-.main-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.content {
-  background-color: #f4f4f4;
-  padding: 20px;
-}
-
-.scrollable-content {
-  flex: 1.618;
-  overflow-y: auto; /* Enable scrolling */
-  background-color: #eaeaea;
-  padding: 20px;
-}
-
-/* Optional: Add some styling for better aesthetics */
 h1 {
-  color: #333;
-}
-
-p {
-  line-height: 1.6;
-}
-
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #f0f0f0;
-}
-
-.blob {
-  width: 100px;
-  height: 100px;
-  background-color: #3498db;
-  border-radius: 50%;
-  position: relative;
-  animation: blob 2s infinite;
-}
-
-@keyframes blob {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
+    font-family: "Libre Baskerville", serif;
 }
