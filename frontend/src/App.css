@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(90deg, hsla(68, 17%, 27%, 1) 0%, hsla(45, 22%, 96%, 1) 100%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.contact-info {
+  flex: 1;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-content {
+  flex: 1;
   display: flex;
   flex-direction: column;
+}
+
+.content {
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.scrollable-content {
+  flex: 1.618;
+  overflow-y: auto; /* Enable scrolling */
+  background-color: #eaeaea;
+  padding: 20px;
+}
+
+/* Optional: Add some styling for better aesthetics */
+h1 {
+  color: #333;
+}
+
+p {
+  line-height: 1.6;
+}
+
+body {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
 }
 
-.App-link {
-  color: #61dafb;
+.blob {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  border-radius: 50%;
+  position: relative;
+  animation: blob 2s infinite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes blob {
+  0%, 100% {
+    transform: scale(1);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: scale(1.2);
   }
 }

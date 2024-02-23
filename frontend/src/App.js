@@ -3,23 +3,34 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+<body>
+  <div class="container">
+  <div class="main-content">
+      <div class="content">
+        <h1>Main Content</h1>
+        <p>Accomplished professional renowned for fostering client success and providing effective support in high-profile settings. Demonstrates exceptional cross-functional collaboration skills, facilitating seamless communication and cooperation across all organizational levels. <br>
+        </br> Proficient in leveraging technical tools and project management techniques to enhance client experiences. 
+         Eager to contribute client-relation skills to a dynamic workforce after a career break dedicated to entrepreneurial projects...</p>
+      </div>
     </div>
+    <div class="contact-info">
+      <h1>Theodore Frazier</h1>
+      <ul>
+        <li><a href="#">Location: </a></li>
+        <li><a href="#">Phone Number: </a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="blob"></div>
+    <div class="scrollable-content">
+      <h1>yas</h1>
+    </div>
+  </div>
+</body>
+
+
   );
 }
 
 export default App;
+
