@@ -10,7 +10,7 @@ function Home() {
                 I'm Theo.
             </h2>
         </div>
-    )
-}
+    );
+};
 
 export default Home;
