@@ -5,11 +5,8 @@ function Home() {
         <div className="Home">
             <div className="wraapper">
                 <h1>
-                    Hi,
+                Hi! We are passionate about making the web a better place.
                 </h1>
-                <h2>
-                    I'm Theo.
-                </h2>
             </div>
         </div>
     );

@@ -4,13 +4,13 @@ import './navigation.css';
 
 const Navigation = () => {
     return (
-        <div>
+        <div className="navigation-menu">
             <div>
                 <hr className="custom-hr-thick" />
             </div>
             <div className="navigation-container">
                 <div className="navigation-header">
-                    THEODORE FRAZIER
+                   <h3>THEODORE FRAZIER</h3> 
                 </div>
                 <nav>
                     <ul className="navigation-links">
