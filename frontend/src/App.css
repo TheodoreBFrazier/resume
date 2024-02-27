@@ -16,6 +16,20 @@
     font-style: italic;
 }
 
+
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+
+
+
+
 h1 {
     font-family: "Libre Baskerville", serif;
     font-size: 3.8em;
@@ -40,4 +54,8 @@ h5 {
 
 h6 {
     font-family: "Libre Baskerville", serif;
+}
+
+p {
+    font-family: "montserrat", sans-serif;
 }

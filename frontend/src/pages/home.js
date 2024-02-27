@@ -7,6 +7,7 @@ function Home() {
                 <h1>
                 Hi! We are passionate about making the web a better place.
                 </h1>
+                <p>Testing monsterrat.</p>
             </div>
         </div>
     );
