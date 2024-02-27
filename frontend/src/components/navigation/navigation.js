@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './navigation.css';
 
 const Navigation = () => {
@@ -14,16 +15,28 @@ const Navigation = () => {
                 <nav>
                     <ul className="navigation-links">
                         <li>
-                            1. Home
+                            1.
+                            <Link to="/">
+                                Home
+                            </Link>
                         </li>
                         <li>
-                            2. About
+                            2.
+                            <Link to="/about">
+                                About
+                            </Link>
                         </li>
                         <li>
-                            3. Resume
+                            3.
+                            <Link to="/resume">
+                                Resume
+                            </Link>
                         </li>
                         <li>
-                            4. Work With Me
+                            4.
+                            <Link to="/contact">
+                                Work With Me
+                            </Link>
                         </li>
                     </ul>
                 </nav>

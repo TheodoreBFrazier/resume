@@ -1,4 +1,4 @@
-function ContactForm() {
+export default function ContactForm() {
     return (
         <div id="form-container">
             <h1>&bull; Get In Touch &bull;</h1>
