@@ -14,20 +14,22 @@ function Home() {
                         box-sizing: border-box;
                         width: 33.33%;
                         padding: 20px;
-                        border: 1px solid #ccc;
                         text-align: center;
                     }
                 `}
             </style>
             <div className="wraapper">
                 <h1>
-                    Hi! We are passionate about making the web a better place.
+                    Hi!<br /> I'm Theodore.
                 </h1>
                 <p>Testing monsterrat.</p>
             </div>
+            <div>
+            <h2>We are <i>passionate</i> about making the web a better place.</h2>
+            </div>
             <div className="services-grid">
                 <div class="grid-item">
-                    <h3>
+                    <h3 style={{ color: '#0b6e4f', fontSize: '16pt' }}>
                         Account Management
                     </h3>
                     <p>
@@ -44,6 +46,9 @@ function Home() {
                 <div class="grid-item">7</div>
                 <div class="grid-item">8</div>
                 <div class="grid-item">9</div>
+            </div>
+            <div>
+                <h3><i>I've worked for several prestigious employers, like:</i></h3>
             </div>
         </div>
     );
