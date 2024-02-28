@@ -18,7 +18,7 @@ function Home() {
                     }
                 `}
             </style>
-            <div className="wraapper">
+            <div className="wrapper">
                 <h1>
                     Hi!<br /> I'm Theodore.
                 </h1>
