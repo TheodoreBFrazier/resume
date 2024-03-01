@@ -8,13 +8,15 @@ import {
 /* i will need to import a single view */
 
 /* API import */
+const API = process.env.REACT_APP_API_URL;
+
 
 export default resume() {
     const [job, setJob] = useState([])
 
     useEffect(() => {
         axios
-            .get(API + "/")
+            .get(`${API}/resume`)
             .then((response) => {
                 setJob(response.data);
                 console.log(response.data);

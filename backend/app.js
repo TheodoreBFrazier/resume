@@ -1,11 +1,14 @@
 const express = require("express");
 const cors = require("cors");
+const resumeController = require("./controllers/careerController")
 
-
+//configuration
 const app = express();
 
 app.use(cors());
+app.use(express.json());
 
+app.use("/resume", resumeController);
 
 //HomePage
 app.get("/", (request, response) => {
@@ -13,15 +16,21 @@ app.get("/", (request, response) => {
 });
 
 //About
-app.use("/about")
+app.use("/about", (request, response) => {
+ response.send("About Page")
+})
 
 //Resume
 
-app.use("/resume")
+app.use("/resume", (request, response) => {
+    response.send("Resume Page")
+})
 
 //Contact
-app.use("/contact")
+app.use("/contact", (request, response) => {
+    response.send("Contact Page")
+})
 
-app.listen(3003);
+require("dotenv").config();
 
 module.exports = app;

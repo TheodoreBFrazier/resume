@@ -1,18 +1,19 @@
 const express = require("express");
-const career = express.Router();
+const resume = express.Router();
 
-const { getMyWorkHistory } = require("../queries/queries.js")
+const {
+    getJobs
+} = require("../queries/queries.js");
 
-career.get("/", async (request, response) => {
-    const workHistory = await getMyWorkHistory()
-    if(workHistory[0]){
-        response.status(200).json(workHistory)
-        console.log(workHistory)
-    } else {
-        response.status(500).json({ error: "sorry no jobs!"})
-    }
-    
+resume.get("/", async (request, response) => {
+const allJobs = await getJobs()
+if (allJobs[0] ) {
+    response.status(200).json(allJobs);
+    console.log(allJobs)
+} else {
+ response.status(500).json({ error: "error"})
+}
 })
 
 
-module.exports = career;
+module.exports = resume;
