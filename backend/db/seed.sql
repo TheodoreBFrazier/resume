@@ -1,7 +1,7 @@
 \c data_dev
 
 INSERT INTO
-    job_one(
+    job_id(
     company_name,
     job_title,
     start_year,
