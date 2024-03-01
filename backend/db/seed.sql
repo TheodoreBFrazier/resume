@@ -1,7 +1,7 @@
 \c data_dev
 
 INSERT INTO
-    job_id(
+    jobs (
     company_name,
     job_title,
     start_year,
@@ -39,30 +39,7 @@ VALUES
     'Supply Chain Management',
     'Research',
     'Branding'
-     );
-
-
-INSERT INTO
-    job_two(
-    company_name,
-    job_title,
-    start_year,
-    end_year,
-    company_overview,
-    bullet_point_one,
-    bullet_point_two,
-    bullet_point_three,
-    bullet_point_four,
-    skill_one,
-    skill_two,
-    skill_three,
-    skill_four,
-    skill_five,
-    skill_six,
-    skill_seven,
-    skill_eight 
-    )
-    VALUES
+     ),
     (
         'W2o Group',
         'Senior Administrative Assistant',
@@ -81,30 +58,8 @@ INSERT INTO
         'Facilities Management',
         'Key Account Support',
         'Problem Solving'
-    );
-
-INSERT INTO
-    job_three(
-    company_name,
-    job_title,
-    start_year,
-    end_year,
-    company_overview,
-    bullet_point_one,
-    bullet_point_two,
-    bullet_point_three,
-    bullet_point_four,
-    skill_one,
-    skill_two,
-    skill_three,
-    skill_four,
-    skill_five,
-    skill_six,
-    skill_seven,
-    skill_eight 
-    )
-    VALUES
-    (
+    ),
+(
 'Sothebys International Realty',
 'Office Manager',
 2016,
@@ -122,29 +77,7 @@ NULL,
 'marketing',    
 'collaboration',
 'project management'    
-    );
-
-INSERT INTO
-    job_four(
-    company_name,
-    job_title,
-    start_year,
-    end_year,
-    company_overview,
-    bullet_point_one,
-    bullet_point_two,
-    bullet_point_three,
-    bullet_point_four,
-    skill_one,
-    skill_two,
-    skill_three,
-    skill_four,
-    skill_five,
-    skill_six,
-    skill_seven,
-    skill_eight 
-    )
-    VALUES
+    ),
     (
 'Regus Management Group',
 'Community Manager',
@@ -163,30 +96,8 @@ NULL,
 'marketing',    
 'collaboration',
 'project management'  
-    );
-
-INSERT INTO
-    job_five(
-    company_name,
-    job_title,
-    start_year,
-    end_year,
-    company_overview,
-    bullet_point_one,
-    bullet_point_two,
-    bullet_point_three,
-    bullet_point_four,
-    skill_one,
-    skill_two,
-    skill_three,
-    skill_four,
-    skill_five,
-    skill_six,
-    skill_seven,
-    skill_eight 
-    )
-    VALUES
-    (
+    ),
+(
 'Brooks Brothers',
 'Customer Service Representative',
 2008,
