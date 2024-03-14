@@ -1,9 +1,17 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+//Material UI Card Imports
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 
+//Material UI Accordion Imports
+import { Accordion } from "@mui/material";
+import AccordionActions from "@mui/material/AccordionActions";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import ExpandMoreIcon from "mui/icons-material/ExpandMore";
+import Button from "@mui/material/Button";
 
 const API = process.env.REACT_APP_API_URL;
 
