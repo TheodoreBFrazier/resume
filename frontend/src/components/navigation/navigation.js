@@ -5,9 +5,6 @@ import './navigation.css';
 const Navigation = () => {
     return (
         <div className="navigation-menu">
-            <div>
-                <hr className="custom-hr-thick" />
-            </div>
             <div className="navigation-container">
                 <div className="navigation-header">
                    <h3>THEODORE FRAZIER</h3> 

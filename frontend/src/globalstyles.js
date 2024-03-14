@@ -4,8 +4,8 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyles = createGlobalStyle`
   @media (min-width: 1200px) {
     body {
-      margin-left: 400px;
-      margin-right: 400px;
+      margin-left: 200px;
+      margin-right: 200px;
     }
   }
 `;

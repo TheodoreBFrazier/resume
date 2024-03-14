@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 
 //Material UI Card Imports
@@ -18,6 +18,9 @@ const API = process.env.REACT_APP_API_URL;
 function Resume() {
     const [resumeData, setResumeData] = useState([]);
 
+
+
+    //retriving API data
     useEffect(() => {
         axios
             .get(`${API}/resume`)
@@ -29,12 +32,12 @@ function Resume() {
             });
     }, []);
 
+
     return (
         <div className="resume">
             <style>
                 {`
                 .resume {
-                    max-width: 800px;
                     margin: 0 auto;
                     padding: 0;
                     display: flex;
@@ -47,8 +50,8 @@ function Resume() {
 
                 .right-column {
                     width: 60%;
-                    height: 100vh;
-                    overflow-y: auto;
+                    display: flex;
+                    flex-direction: column;
                 }
 
                 .right-column::-webkit-scrollbar {
@@ -64,10 +67,59 @@ function Resume() {
                     background-color: #f1f1f1;
                     border-radius: 10px;
                 }
+
+                .card {
+                    margin-bottom: 30px;
+                }
+
+                .card-container {
+                    flex: 1;
+                    height:  70vh;
+                    margin-top: 200px;
+                }
+
+                .card-content {
+                    height: 60vh;
+                }
+
+                .vertical-line {
+                    background-image: linear-gradient(135deg, #97ABFF 10%, #123597 100%);
+                    width: 3px;
+                    position: absolute;
+                    height: 100vh;
+                    left: 40%; 
+                    z-index: -1;
+                    top: 200px;
+                }
+
+                .animate-vertical-line {
+                    height: 100vh;
+                  }
+
+                .circle {
+                    width: 10px;
+                    height: 10px; 
+                    border: 2px solid black; 
+                    border-radius: 50%; 
+                    position: fixed;
+                    left: calc(35% - 5px); 
+                    top: 230px; 
+                }
+
+                .circle {
+                    width: 10px;
+                    height: 10px;
+                    border: 2px solid black;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: calc(35% - 5px);
+                }
+
             `}
             </style>
+
+            <div className="circle"></div>
             <div className="left-column">
-                <h2>Resume</h2>
                 <ul>
                     <li>theo@theodorefrazier.com</li>
                     <li>(917) 403-0173</li>
@@ -75,36 +127,43 @@ function Resume() {
                 </ul>
             </div>
             <div className="right-column">
-
-                {resumeData.map((position) => (
-                    <Card key={position.job_id} variant="outlined">
-                        <CardContent>
-                            <div>
-                                <h3> {position.company_name} </h3>
-                                <h4> {position.job_title}, {position.start_year} - {position.end_year} </h4>
-                                <h4> {position.company_overview} </h4>
-                                <ul>
-                                    <li>  {position.bullet_point_one} </li>
-                                    <li> {position.bullet_point_two} </li>
-                                    <li>  {position.bullet_point_three} </li>
-                                    <li> {position.bullet_point_four} </li>
-                                </ul>
-                                <Accordion>
-                                    <AccordionSummary
-                                        expandIcon={<ExpandMoreIcon />}
-                                        aria-controls="panel1-content"
-                                        id="skills-header"
-                                    >
-                                        <p>Skills used:</p>
-                                    </AccordionSummary>
-                                    <AccordionDetails>
-                                        {position.skill_one}
-                                    </AccordionDetails>
-                                </Accordion>
-                            </div>
-                        </CardContent>
-                    </Card>
-                ))}
+                <div className="title-container">
+                    <div className="vertical-line"></div>
+                    <div className="resume-title">
+                        <h1>Resume</h1>
+                    </div>
+                </div>
+                <div className="card-container">
+                    {resumeData.map((position) => (
+                        <Card key={position.job_id} variant="outlined" className="card">
+                            <CardContent className="card-content">
+                                <div>
+                                    <h3> {position.company_name} </h3>
+                                    <h4> {position.job_title}, {position.start_year} - {position.end_year} </h4>
+                                    <h4> {position.company_overview} </h4>
+                                    <ul>
+                                        {position.bullet_point_one && <li>{position.bullet_point_one}</li>}
+                                        {position.bullet_point_two && <li>{position.bullet_point_two}</li>}
+                                        {position.bullet_point_three && <li>{position.bullet_point_three}</li>}
+                                        {position.bullet_point_four && <li>{position.bullet_point_four}</li>}
+                                    </ul>
+                                    <Accordion>
+                                        <AccordionSummary
+                                            expandIcon={<ExpandMoreIcon />}
+                                            aria-controls="panel1-content"
+                                            id="skills-header"
+                                        >
+                                            <p>Skills used:</p>
+                                        </AccordionSummary>
+                                        <AccordionDetails>
+                                            {position.skill_one}
+                                        </AccordionDetails>
+                                    </Accordion>
+                                </div>
+                            </CardContent>
+                        </Card>
+                    ))}
+                </div>
             </div>
         </div >
     );
