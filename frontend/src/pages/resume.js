@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+
+
 const API = process.env.REACT_APP_API_URL;
 
 function Resume() {
@@ -63,14 +67,28 @@ function Resume() {
                 </ul>
             </div>
             <div className="right-column">
+
                 {resumeData.map((position) => (
-                    <div key={position.job_id}>
-                        {position.job_title}
-                    </div>
+                    <Card key={position.job_id} variant="outlined">
+                        <CardContent>
+                            <div>
+                                <h3> {position.company_name} </h3>
+                                <h4> {position.job_title}, {position.start_year} - {position.end_year} </h4>
+                                <h4> {position.company_overview} </h4>
+                                <ul>
+                                    <li>  {position.bullet_point_one} </li>
+                                    <li> {position.bullet_point_two} </li>
+                                    <li>  {position.bullet_point_three} </li>
+                                    <li> {position.bullet_point_four} </li>
+                                </ul>
+                                <p>Skills used:</p>
+                            </div>
+                        </CardContent>
+                    </Card>
                 ))}
             </div>
-        </div>
+        </div >
     );
-}
+};
 
 export default Resume;
